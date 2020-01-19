@@ -2,7 +2,7 @@
 
 namespace DivineOmega\WikipediaSearch;
 
-use DivineOmega\WikipediaSearch\Interfaces\SearchResultInterface;
+use DivineOmega\BaseSearch\Interfaces\SearchResultInterface;
 
 class WikipediaSearchResult implements SearchResultInterface
 {

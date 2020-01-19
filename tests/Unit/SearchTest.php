@@ -1,5 +1,6 @@
 <?php
 
+use DivineOmega\BaseSearch\Interfaces\SearchResultInterface;
 use DivineOmega\WikipediaSearch\Enums\Languages;
 use DivineOmega\WikipediaSearch\WikipediaSearcher;
 use DivineOmega\WikipediaSearch\WikipediaSearchResult;
@@ -17,6 +18,10 @@ final class SearchTest extends TestCase
 
         foreach($results as $result) {
             $this->assertTrue($result instanceof WikipediaSearchResult);
+            $this->assertTrue($result instanceof SearchResultInterface);
+
+            $this->assertGreaterThanOrEqual(0, $result->getScore());
+            $this->assertLessThanOrEqual(1, $result->getScore());
         }
     }
 
