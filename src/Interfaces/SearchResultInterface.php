@@ -7,5 +7,5 @@ interface SearchResultInterface
     public function getTitle(): string;
     public function getDescription(): string;
     public function getUrl(): string;
-    public function getScore(): string;
+    public function getScore(): float;
 }

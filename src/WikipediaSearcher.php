@@ -24,14 +24,12 @@ class WikipediaSearcher implements SearcherInterface
 
         $results = [];
 
-        $score = count($decodedResponse['query']['search']);
+        $count = count($decodedResponse['query']['search']);
 
-        foreach ($decodedResponse['query']['search'] as $item) {
+        foreach ($decodedResponse['query']['search'] as $index => $item) {
+            $score = ($count - $index) / $count;
             $results[] = new WikipediaSearchResult($item, $this->language, $score);
-            $score--;
         }
-
-        var_dump($results[1]);
 
         return $results;
     }

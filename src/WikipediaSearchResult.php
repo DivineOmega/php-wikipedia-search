@@ -11,7 +11,7 @@ class WikipediaSearchResult implements SearchResultInterface
     private $description;
     private $score;
 
-    public function __construct(array $item, string $language, int $score)
+    public function __construct(array $item, string $language, float $score)
     {
         $this->title = html_entity_decode($item['title'], ENT_QUOTES | ENT_HTML5);
         $this->url = 'https://'.$language.'.wikipedia.org/wiki/'.str_replace(' ', '_', $this->title);
@@ -34,7 +34,7 @@ class WikipediaSearchResult implements SearchResultInterface
         return $this->url;
     }
 
-    public function getScore(): string
+    public function getScore(): float
     {
         return $this->score;
     }
