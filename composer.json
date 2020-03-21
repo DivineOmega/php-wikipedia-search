@@ -20,5 +20,10 @@
         "psr-4": {
             "DivineOmega\\WikipediaSearch\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DivineOmega\\WikipediaSearch\\Tests\\": "tests/Unit/"
+        }
     }
 }

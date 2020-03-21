@@ -1,5 +1,7 @@
 <?php
 
+namespace DivineOmega\WikipediaSearch\Tests;
+
 use DivineOmega\BaseSearch\Interfaces\SearchResultInterface;
 use DivineOmega\WikipediaSearch\Enums\Languages;
 use DivineOmega\WikipediaSearch\WikipediaSearcher;
